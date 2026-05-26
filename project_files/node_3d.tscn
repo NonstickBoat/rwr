@@ -1,6 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2fw7d2102u8t"]
+[gd_scene load_steps=12 format=3 uid="uid://c2fw7d2102u8t"]
 
 [ext_resource type="Script" path="res://node_3d.gd" id="1_as1bm"]
+[ext_resource type="Material" uid="uid://ccesjc7vfhk0y" path="res://assets/materials/hands_material.tres" id="2_yqf7j"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4d6p1"]
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jftnv"]
+size = Vector3(20, 0.1, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_uhxbu"]
 size = Vector3(0.1, 0.1, 0.1)
@@ -10,8 +17,28 @@ top_radius = 0.005
 bottom_radius = 0.005
 height = 0.01
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_74mg7"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_njeuv"]
+
+[sub_resource type="Environment" id="Environment_7d5u2"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_tir1c"]
+
+[sub_resource type="Compositor" id="Compositor_u1t36"]
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_as1bm")
+
+[node name="Level" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level"]
+mesh = SubResource("PlaneMesh_4d6p1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_jftnv")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
@@ -23,6 +50,7 @@ tracker = &"left_hand"
 [node name="HandleLeftRoot" type="Node3D" parent="XROrigin3D/LeftController"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
+material_override = ExtResource("2_yqf7j")
 mesh = SubResource("BoxMesh_uhxbu")
 skeleton = NodePath("../..")
 
@@ -143,6 +171,7 @@ mesh = SubResource("CylinderMesh_iki00")
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="XROrigin3D/RightController/HandleRightRoot"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0564812, -0.101525)
+material_override = ExtResource("2_yqf7j")
 mesh = SubResource("CylinderMesh_iki00")
 
 [node name="MeshInstance3D11" type="MeshInstance3D" parent="XROrigin3D/RightController/HandleRightRoot"]
@@ -175,3 +204,20 @@ mesh = SubResource("CylinderMesh_iki00")
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Enter VR"
+
+[node name="CylinderObstacle" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36761, 0.13066, 0)
+mesh = SubResource("CylinderMesh_74mg7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CylinderObstacle"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CylinderObstacle/StaticBody3D"]
+shape = SubResource("CylinderShape3D_njeuv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0675625, 0.997715, 0, -0.997715, 0.0675625, 0, 4.83619, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7d5u2")
+camera_attributes = SubResource("CameraAttributesPractical_tir1c")
+compositor = SubResource("Compositor_u1t36")
