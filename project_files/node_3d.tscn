@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2fw7d2102u8t"]
+[gd_scene load_steps=14 format=3 uid="uid://c2fw7d2102u8t"]
 
 [ext_resource type="Script" path="res://node_3d.gd" id="1_as1bm"]
 [ext_resource type="Material" uid="uid://ccesjc7vfhk0y" path="res://assets/materials/hands_material.tres" id="2_yqf7j"]
@@ -27,6 +27,11 @@ size = Vector3(0.1, 0.1, 0.1)
 top_radius = 0.005
 bottom_radius = 0.005
 height = 0.01
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_msr3e"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.1
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_74mg7"]
 
@@ -209,6 +214,13 @@ mesh = SubResource("CylinderMesh_iki00")
 [node name="MeshInstance3D16" type="MeshInstance3D" parent="XROrigin3D/RightController/HandleRightRoot"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0412127, 0.037306, -0.113489)
 mesh = SubResource("CylinderMesh_iki00")
+
+[node name="TeleporterRay" type="RayCast3D" parent="XROrigin3D/RightController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="TeleporterMarker" type="MeshInstance3D" parent="XROrigin3D/RightController"]
+visible = false
+mesh = SubResource("CylinderMesh_msr3e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
