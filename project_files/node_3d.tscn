@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://c2fw7d2102u8t"]
+[gd_scene load_steps=16 format=3 uid="uid://c2fw7d2102u8t"]
 
 [ext_resource type="Script" path="res://node_3d.gd" id="1_as1bm"]
+[ext_resource type="Material" uid="uid://cx8tfnei4x3vr" path="res://assets/materials/level_material.tres" id="2_qpfwu"]
 [ext_resource type="Material" uid="uid://ccesjc7vfhk0y" path="res://assets/materials/hands_material.tres" id="2_yqf7j"]
 [ext_resource type="Script" path="res://teleport.gd" id="3_2oc07"]
 
@@ -51,6 +52,7 @@ transform = Transform3D(1, 0, 0, 0, 0.0675625, 0.997715, 0, -0.997715, 0.0675625
 [node name="Level" type="Node3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Level"]
+material_override = ExtResource("2_qpfwu")
 mesh = SubResource("PlaneMesh_4d6p1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Level/MeshInstance3D"]
