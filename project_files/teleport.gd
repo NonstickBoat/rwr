@@ -9,13 +9,20 @@ func _ready() -> void:
 	xr_origin = get_parent() as XROrigin3D
 	xr_camera = xr_origin.get_node("XRCamera3D") as XRCamera3D
 	marker.visible = false
+	button_pressed.connect(self._on_right_controller_button_pressed)
 
 func _process(_delta: float) -> void:
 	if ray.is_colliding():
 		marker.global_transform.origin = ray.get_collision_point()
 		marker.visible = true
+		if(get_input("trigger")):
+			teleport_now()
 	else:
 		marker.visible = false
+
+func _on_right_controller_button_pressed(button:String):
+	if(button=="trigger"):
+		teleport_now()
 
 func teleport_now() -> void:
 	if not ray.is_colliding():
