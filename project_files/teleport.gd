@@ -4,12 +4,14 @@ extends XRController3D
 @onready var marker: MeshInstance3D = $TeleporterMarker
 var xr_origin: XROrigin3D
 var xr_camera: XRCamera3D
+var teleported = false;
 
 func _ready() -> void:
 	xr_origin = get_parent() as XROrigin3D
 	xr_camera = xr_origin.get_node("XRCamera3D") as XRCamera3D
 	marker.visible = false
 	button_pressed.connect(self._on_right_controller_button_pressed)
+	button_released.connect(self._on_right_controller_button_released)
 
 func _process(_delta: float) -> void:
 	if ray.is_colliding():
@@ -20,9 +22,14 @@ func _process(_delta: float) -> void:
 	else:
 		marker.visible = false
 
-func _on_right_controller_button_pressed(button:String):
+func _on_right_controller_button_released(button:String):
 	if(button=="trigger"):
+		teleported=false
+
+func _on_right_controller_button_pressed(button:String):
+	if(button=="trigger" and not teleported):
 		teleport_now()
+		teleported = true
 
 func teleport_now() -> void:
 	if not ray.is_colliding():
