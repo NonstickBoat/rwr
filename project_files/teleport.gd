@@ -1,7 +1,7 @@
 extends XRController3D
 
-@onready var ray: RayCast3D = $TeleportRay
-@onready var marker: MeshInstance3D = $TeleportMarker
+@onready var ray: RayCast3D = $TeleporterRay
+@onready var marker: MeshInstance3D = $TeleporterMarker
 var xr_origin: XROrigin3D
 var xr_camera: XRCamera3D
 

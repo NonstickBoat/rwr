@@ -81,77 +81,77 @@ mesh = SubResource("BoxMesh_uhxbu")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0114812, -0.0609395)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, -0.000943135, -0.0562683)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0264812, -0.0609395)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0140569, -0.0562683)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0414812, -0.0609395)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0290569, -0.0562683)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0564812, -0.0609395)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0440569, -0.0562683)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0412127, 0.037306, -0.0609395)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0412127, 0.0248817, -0.0562683)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0114812, -0.0724645)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, -0.000943135, -0.0677933)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0264812, -0.0724645)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0140569, -0.0677933)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0414812, -0.0724645)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0290569, -0.0677933)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0564812, -0.0724645)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0440569, -0.0677933)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D11" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0412127, 0.037306, -0.0724645)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0412127, 0.0248817, -0.0677933)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D12" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0114812, -0.0844285)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, -0.000943135, -0.0797573)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D13" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0264812, -0.0844285)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0140569, -0.0797573)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D14" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0414812, -0.0844285)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0290569, -0.0797573)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D15" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0564812, -0.0844285)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.02, 0.0440569, -0.0797573)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D16" type="MeshInstance3D" parent="XROrigin3D/LeftController/HandleLeftRoot"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0412127, 0.037306, -0.0844285)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0412127, 0.025381, -0.0797573)
 mesh = SubResource("CylinderMesh_iki00")
 skeleton = NodePath("../..")
 
@@ -228,13 +228,13 @@ mesh = SubResource("CylinderMesh_iki00")
 [node name="TeleporterRay" type="RayCast3D" parent="XROrigin3D/RightController"]
 target_position = Vector3(0, 0, -10)
 collision_mask = 2
+collide_with_areas = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/RightController/TeleporterRay"]
 visible = false
 mesh = SubResource("BoxMesh_cx1cd")
 
 [node name="TeleporterMarker" type="MeshInstance3D" parent="XROrigin3D/RightController"]
-visible = false
 mesh = SubResource("CylinderMesh_msr3e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
