@@ -27,11 +27,15 @@ func _on_right_controller_button_pressed(button:String):
 func teleport_now() -> void:
 	if not ray.is_colliding():
 		return
+		
 	var target: Vector3 = ray.get_collision_point()
 
 	var origin_tf := xr_origin.global_transform
 	var cam_tf := xr_camera.global_transform
 	var cam_offset := cam_tf.origin - origin_tf.origin
+	cam_offset.y = 0.0
 
-	origin_tf.origin = target - cam_offset
+	# 2) Ustal wysokość miejsca docelowego według trafienia (lub stałe 0.0, jeśli podłoże jest płaskie):
+	origin_tf.origin = Vector3(target.x - cam_offset.x, target.y, target.z - cam_offset.z)
+	# (alternatywnie) origin_tf.origin = Vector3(target.x - cam_offset.x, 0.0, target.z - cam_offset.z)
 	xr_origin.global_transform = origin_tf

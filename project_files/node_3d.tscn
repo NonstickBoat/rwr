@@ -69,6 +69,7 @@ shape = SubResource("BoxShape3D_jftnv")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 8.856)
+layers = 2
 mesh = SubResource("BoxMesh_owoot")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Level/MeshInstance3D2"]
@@ -78,6 +79,7 @@ shape = SubResource("BoxShape3D_t5byu")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Level"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 5, -1.5478)
+layers = 2
 mesh = SubResource("BoxMesh_owoot")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Level/MeshInstance3D3"]
@@ -87,6 +89,7 @@ shape = SubResource("BoxShape3D_t5byu")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -10)
+layers = 2
 mesh = SubResource("BoxMesh_owoot")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Level/MeshInstance3D4"]
@@ -96,6 +99,7 @@ shape = SubResource("BoxShape3D_t5byu")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Level"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.88966, 5, -1)
+layers = 2
 mesh = SubResource("BoxMesh_owoot")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Level/MeshInstance3D5"]
