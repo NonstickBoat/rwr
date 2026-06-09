@@ -36,6 +36,7 @@ func teleport_now() -> void:
 	cam_offset.y = 0.0
 
 	# 2) Ustal wysokość miejsca docelowego według trafienia (lub stałe 0.0, jeśli podłoże jest płaskie):
-	origin_tf.origin = Vector3(target.x - cam_offset.x, target.y, target.z - cam_offset.z)
-	# (alternatywnie) origin_tf.origin = Vector3(target.x - cam_offset.x, 0.0, target.z - cam_offset.z)
+	#origin_tf.origin = Vector3(target.x - cam_offset.x, target.y, target.z - cam_offset.z)
+	# (alternatywnie) 
+	origin_tf.origin = Vector3(target.x - cam_offset.x, 0.0, target.z - cam_offset.z)
 	xr_origin.global_transform = origin_tf
