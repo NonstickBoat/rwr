@@ -17,8 +17,6 @@ func _process(_delta: float) -> void:
 	if ray.is_colliding():
 		marker.global_transform.origin = ray.get_collision_point()
 		marker.visible = true
-		if(get_input("trigger")):
-			teleport_now()
 	else:
 		marker.visible = false
 
